@@ -10,6 +10,8 @@ import dotenv from 'dotenv';
 import fetch from "node-fetch";
 import fs from 'fs';
 
+const chosenModel = "llama3.2";
+
 // Loads the quotes and authors from the quotes.json file
 const quotes = JSON.parse(fs.readFileSync('./quotes.json', 'utf-8'));
 // Loads the login details from the .env file
@@ -51,7 +53,7 @@ async function modifyQuote(quote1, quote2) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: "llama3.2",
+      model: chosenModel,
       prompt: `
         Please mash the following two quotes together. Find a creative way to combine them while maintaining the theme of both of them. Do not provide any explanation for why or how you combined the quotes, only provide the final resulting quote. The final quote must not be more than 250 characters in length due to posting limitations. Limit the length of the new quote to 250 characters or less. Ensure that the final quote actually makes sense and is not inherently nonsensical. The quote should be inspirational and uplifting, providing hope and encouragement.\n
         Quote one: ${quote1[0]}\n
