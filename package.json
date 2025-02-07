@@ -2,7 +2,6 @@
   "dependencies": {
     "@atproto/api": "^0.13.31",
     "dotenv": "^16.4.7",
-    "node-fetch": "^3.3.2",
-    "type": "module"
+    "node-fetch": "^3.3.2"
   }
 }

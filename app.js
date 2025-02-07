@@ -53,7 +53,7 @@ async function modifyQuote(quote1, quote2) {
     body: JSON.stringify({
       model: "llama3.2",
       prompt: `
-        Please mash the following two quotes together. Find a creative way to combine them while maintaining the theme of both of them. Do not provide any explanation for why or how you combined the quotes, only provide the final resulting quote. The final quote must not be more than 250 characters in length due to posting limitations. Limit the length of the new quote to 250 characters or less. Ensure that the final quote actually makes sense and is not inherently nonsensical.\n
+        Please mash the following two quotes together. Find a creative way to combine them while maintaining the theme of both of them. Do not provide any explanation for why or how you combined the quotes, only provide the final resulting quote. The final quote must not be more than 250 characters in length due to posting limitations. Limit the length of the new quote to 250 characters or less. Ensure that the final quote actually makes sense and is not inherently nonsensical. The quote should be inspirational and uplifting, providing hope and encouragement.\n
         Quote one: ${quote1[0]}\n
         Quote two: ${quote2[0]}
       `,
